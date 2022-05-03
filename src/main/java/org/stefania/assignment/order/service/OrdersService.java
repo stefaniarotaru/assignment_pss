@@ -10,6 +10,12 @@ import org.stefania.assignment.supplier.domain.SupplierOutput;
 import java.util.*;
 
 public class OrdersService {
+    /**
+     * Group products from Orders object by supplier name
+     *
+     * @param orders - object containing orders
+     * @return grouped products
+     */
     public Map<String, SupplierOutput> getProductsBySuppliers(Orders orders) {
         Map<String, SupplierOutput> productsBySuppliers = new HashMap<>();
 
