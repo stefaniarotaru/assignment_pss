@@ -1,4 +1,4 @@
-#Assignment for PSS
+# Assignment for PSS
 
 This project is a middleware Java console application which transforms an order XML file containing products for various 
 suppliers into multiple XML files containing the products for each supplier.
@@ -11,12 +11,12 @@ The transformation from the input order XML to each supplier file is implemented
 and the value is an ordered TreeSet containing the supplier's products.
 The ordering of the products is done using the DescendingOutputProductComparator class.
 
-##Prerequisites
+## Prerequisites
 
 * Maven 3+
 * JDK 11
 
-##Usage
+## Usage
 
 1. Run 'mvn package' in the project root directory.
 2. Run 'cd target'.
