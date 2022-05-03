@@ -26,14 +26,16 @@ public class Main {
         }
         Path inputPath = Paths.get(INPUT_ORDERS_DIR);
         try {
-            Files.createDirectory(inputPath);
+            if (!Files.exists(inputPath)) {
+                Files.createDirectory(inputPath);
+            }
         } catch (IOException e) {
             System.err.println("Could not create input directory." + e);
             return;
         }
 
         try {
-           inputPath.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
+            inputPath.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
         } catch (IOException e) {
             System.err.println("Could not register file watcher.");
             return;

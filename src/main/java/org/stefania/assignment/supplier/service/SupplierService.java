@@ -16,7 +16,9 @@ public class SupplierService {
 
     public void writeSupplierFiles(Map<String, SupplierOutput> productsBySuppliers, String fileNumber) {
         try {
-            Files.createDirectory(Path.of(OUTPUT_DIR));
+            if (!Files.exists(Path.of(OUTPUT_DIR))) {
+                Files.createDirectory(Path.of(OUTPUT_DIR));
+            }
         } catch (IOException e) {
             System.err.println("Could not create output directory. " + e);
             return;
