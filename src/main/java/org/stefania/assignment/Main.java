@@ -24,10 +24,16 @@ public class Main {
             System.err.println("Could not get WatchService.");
             return;
         }
-        Path path = Paths.get(INPUT_ORDERS_DIR);
+        Path inputPath = Paths.get(INPUT_ORDERS_DIR);
+        try {
+            Files.createDirectory(inputPath);
+        } catch (IOException e) {
+            System.err.println("Could not create input directory." + e);
+            return;
+        }
 
         try {
-           path.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
+           inputPath.register(watchService, StandardWatchEventKinds.ENTRY_CREATE);
         } catch (IOException e) {
             System.err.println("Could not register file watcher.");
             return;
