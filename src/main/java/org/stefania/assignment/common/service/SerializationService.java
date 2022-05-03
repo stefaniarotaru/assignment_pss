@@ -3,14 +3,14 @@ package org.stefania.assignment.common.service;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.stefania.assignment.order.domain.Orders;
 import org.stefania.assignment.supplier.domain.SupplierOutput;
 
 import java.io.File;
 import java.util.Optional;
 
-@Slf4j
+@Log4j2
 public class SerializationService {
 
     /**

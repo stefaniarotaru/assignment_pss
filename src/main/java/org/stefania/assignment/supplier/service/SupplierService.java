@@ -1,6 +1,6 @@
 package org.stefania.assignment.supplier.service;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.stefania.assignment.common.service.SerializationService;
 import org.stefania.assignment.supplier.domain.SupplierOutput;
 
@@ -9,7 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Map;
 
-@Slf4j
+@Log4j2
 public class SupplierService {
 
     private static final String OUTPUT_DIR = "output_orders/";
